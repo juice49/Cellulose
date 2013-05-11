@@ -1,6 +1,6 @@
 # Cellulose
 
-Cellulose is a small mixin based grid system developed to work with the [Stylus CSS preprocessor][http://learnboost.github.io/stylus]. This is very early work - a foray into a "semantic" grid system that encourages users to avoid span* classes. Minimal and untested. Contributions welcome.
+Cellulose is a small mixin based grid system developed to work with the [Stylus CSS preprocessor](http://learnboost.github.io/stylus). This is very early work - a foray into a "semantic" grid system that encourages users to avoid span* classes. Minimal and untested. Contributions welcome.
 
 
 ## Configuration
