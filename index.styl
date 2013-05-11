@@ -1,0 +1,59 @@
+/**
+ * Default Config
+ */
+
+// ...put something here
+
+
+
+
+/**
+ * ColWidth
+ *
+ * Given a column span returns the width as a percentage.
+ */
+ 
+colWidth(cols)
+	((100 / colCount) * cols)%
+
+
+
+
+/**
+ * Span
+ *
+ * Mixin that applies column styling to an element.
+ */
+
+span(cols, centre = false)
+	display inline-block
+	box-sizing border-box
+	vertical-align top
+	width colWidth(cols)
+	
+	if cols < colCount && maxWidth
+		max-width maxWidth
+		
+	if centre
+		centre()
+
+
+
+
+/**
+ * Centre
+ */
+
+centre()
+	display block
+	margin 0 auto
+
+
+
+
+/**
+ * Offset
+ */
+
+offset(cols)
+	margin-left colWidth(cols)
