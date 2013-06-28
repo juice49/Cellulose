@@ -1,5 +1,7 @@
 # Cellulose
 
+**None of this is set in stone. I'm trying to work out how to make a great grid system, and these are some of my thoughts so far.**
+
 Cellulose is a small mixin based grid system developed using the [Stylus CSS preprocessor](http://learnboost.github.io/stylus). This is very early work - a foray into a "semantic" grid system that encourages the user to avoid span* classes. Minimal. Untested. Contributions welcome.
 
 ### Aims
