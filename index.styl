@@ -1,50 +1,74 @@
-/**
- * Default Config
- */
+/* ==========================================================================
+	 Config
+	 ========================================================================== */
 
-// ...the world is quiet here...
+cellulose_config = {
+	colCount: 12,
+	maxWidth: 1140px
+}
 
 
 
 
-/**
- * ColWidth
+
+/* ==========================================================================
+	 Cellulose
+	 ========================================================================== */
+
+/*
+ * Extend the default configuration with the supplied configuration.
  *
- * Given a column span returns the width as a percentage.
- */
- 
-colWidth(cols)
-	((100 / colCount) * cols)%
-
-
-
-
-/**
- * Span
- *
- * Mixin that applies column styling to an element.
+ * This is capitalised; although it is not technically a constructor, it does
+ * need to be excuted before using Cellulose.
  */
 
-span(cols, centre = false)
+Cellulose(config)
+	cellulose_config = merge(cellulose_config, config)
+
+
+
+
+
+/* ==========================================================================
+	 Column Width
+	 ========================================================================== */
+
+/*
+ * Given a column span, returns the width as a percentage.
+ */
+
+cellulose_colWidth(cols)
+	((100 / cellulose_config['colCount']) * cols)%
+
+
+
+
+
+/* ==========================================================================
+	 Span
+	 ========================================================================== */
+
+/*
+ * Apply column layout.
+ */
+
+cellulose_span(cols)
 	display inline-block
-	box-sizing border-box
 	vertical-align top
-	width colWidth(cols)
-	
-	if (cols == colCount) && maxWidth
-		max-width maxWidth
-		
-	if centre
-		centre()
+	width cellulose_colWidth(cols)
+
+	if (cols == cellulose_config['colCount']) && cellulose_config['maxWidth']
+		max-width cellulose_config['maxWidth']
 
 
 
 
-/**
- * Centre
- */
 
-centre()
+/* ==========================================================================
+	 Span
+	 ========================================================================== */
+
+cellulose_centre()
 	display block
 	margin-left auto
 	margin-right auto
@@ -52,9 +76,10 @@ centre()
 
 
 
-/**
- * Offset
- */
 
-offset(cols)
-	margin-left colWidth(cols)
+/* ==========================================================================
+	 Offset
+	 ========================================================================== */
+
+cellulose_offset(cols)
+	margin-left cellulose_colWidth(cols)
