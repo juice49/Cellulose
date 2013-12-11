@@ -40,7 +40,7 @@ There are a handful of reasons to use inline-block for columns rather than float
 
 ### What about those pesky gaps between inline-block elements?
 
-Personally I use [Jade](http://jade-lang.com). It's a beautiful and, in my opinion, more efficient way of authoring HTML that has the additional benefit of compiling to compacted whitespace-less HTML - leaving inline-block elements flush.
+Personally I use [Jade](http://jade-lang.com). It's a beautiful and, in my opinion, more efficient way of authoring HTML that has the additional benefit of compiling to compacted, whitespace-less HTML - leaving inline-block elements flush.
 
 If you write your HTML neat (as in Vodka), you'll need to put your column elements on the same line OR comment out the whitespace between them. Cellulose won't work otherwise. I'm sorry.
 
